@@ -1,0 +1,11 @@
+{
+  "name": "test-agent",
+  "version": "1.0.0",
+  "description": "about test agent skills",
+  "main": "index.js",
+  "author": "lakshitsoni",
+  "license": "MIT",
+  "template": "agent",
+  "skills": {},
+  "keywords": []
+}

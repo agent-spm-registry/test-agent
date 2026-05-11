@@ -1,0 +1,13 @@
+{
+  "description": "Basic agent task example",
+  "input": {
+    "task": "Find information about AI skills",
+    "maxSteps": 5
+  },
+  "expectedOutput": {
+    "success": true,
+    "task": "Find information about AI skills",
+    "stepsExecuted": 1,
+    "stepsPlanned": 1
+  }
+}

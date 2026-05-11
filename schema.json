@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "test-agent",
+  "description": "about test agent skills",
+  "input": {
+    "type": "object",
+    "required": [
+      "task"
+    ],
+    "properties": {
+      "task": {
+        "type": "string",
+        "description": "The goal or task for the agent to accomplish",
+        "minLength": 1
+      },
+      "maxSteps": {
+        "type": "integer",
+        "description": "Maximum number of steps the agent can execute",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 100
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "success",
+      "task",
+      "results"
+    ],
+    "properties": {
+      "success": {
+        "type": "boolean"
+      },
+      "task": {
+        "type": "string"
+      },
+      "stepsExecuted": {
+        "type": "integer"
+      },
+      "stepsPlanned": {
+        "type": "integer"
+      },
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean"
+            },
+            "tool": {
+              "type": "string"
+            },
+            "result": {
+              "type": "object"
+            },
+            "error": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}
